@@ -47,6 +47,25 @@
     outline: none;
     border-radius: 30px;
 }
+
+/* 스크류바 디자인 */
+.container {
+	overflow: auto;
+}
+.container::-webkit-scrollbar {
+	width: 10px;
+}
+.container::-webkit-scrollbar-thumb {
+	background-color: green;
+	border-radius: 10px;
+	background-clip: padding-box;
+	border: 2px solid transparent;
+}
+.container::-webkit-scrollbar-track {
+	background: linear-gradient(to right, lightgreen, lightblue);
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 5px white;
+}
 			</style>
 <!-- 위로버튼 css -->
 <style type="text/css">
@@ -84,7 +103,7 @@ border: 1px solid black;
 background-color:  #FFD9EC;
 float: left;
 </style></head>
-<body oncontextmenu='alert("오른쪽 마우스를 사용하실 수 없습니다"); return false' ondragstart='return false' onselectstart='return false'>
+<body oncontextmenu='alert("오른쪽 마우스를 사용하실 수 없습니다"); return false' ondragstart='return false' onselectstart='return false' class="container">
 	<!-- 자바 스크립트가 안될때 -->
 	   <noscript>
 	   	<div id="contents" style="background-color:#ffff00;">
@@ -125,9 +144,6 @@ float: left;
 				</a>
 			</div>
 		</div><hr>
-			<div style="border: 4px double black; width: 99%; height: 30px; background-color:#689769;">
-			<div class="br"><a href="https://jungo194349.github.io/calculating-period/%EB%82%98%EB%A7%8C%EC%9D%98%20%EA%B0%9C%EC%82%B0%EA%B8%B0%20-%202.html">개산기</a>
-				</div></div><hr/>
 <div style="border: 4px double black; width: 99%; height: 30px; background-color:#689769;">
 	<div class="br">
 			<a href="mailto:jungo19439@gmail.com">문의하러 가기</a>
