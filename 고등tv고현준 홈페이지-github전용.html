@@ -102,7 +102,28 @@ height: 1010px;
 border: 1px solid black;
 background-color:  #FFD9EC;
 float: left;
-</style></head>
+</style>
+<script>
+	function gogo() {
+		if ( document.getElementById("gogo_id").value == "문의하려 가기" ) {
+			location="mailto:jungo19439@gmail.com";
+			document.getElementById("gogo_id").value = "";
+		}
+		else {
+			if ( document.getElementById("gogo_id").value == "고등tv고현준 바로가기" ) {
+				window.open("https://www.youtube.com/channel/UCIO6CZ08wimoQIRLnHCJBXg",'_blank','width=900px,height=900px,toolbars=no,scrollbars=no');
+				document.getElementById("gogo_id").value = "";
+				return false;
+			}
+			else {
+				alert("다른 문자를 입력하지 마세요!");
+				document.getElementById("gogo_id").value = "";
+				return false;
+			}
+		}
+	}
+</script>
+</head>
 <body oncontextmenu='alert("오른쪽 마우스를 사용하실 수 없습니다"); return false' ondragstart='return false' onselectstart='return false' class="container">
 	<!-- 자바 스크립트가 안될때 -->
 	   <noscript>
@@ -139,78 +160,68 @@ float: left;
 		<hr>
 		<div style="border: 4px double black; width: 99%; height: 30px; background-color:#689769;">
 			<div class="br">
-				<a href="https://www.youtube.com/channel/UCIO6CZ08wimoQIRLnHCJBXg" onclick="window.open(this.href,'_blank','width=900px,height=900px,toolbars=no,scrollbars=no');return false;" title="고등tv고현준 유트브 바로가기">
-					<img src="https://s.ytimg.com/yts/img/favicon-vfl8qSV2F.ico"/>고등tv고현준 유트브 바로가기
-				</a>
+				<div>
+				<input list="browsers" id="gogo_id">
+				<datalist id="browsers">
+				<option value="문의하려 가기">
+				<option value="고등tv고현준 바로가기">
+				</datalist>
+				<input type="button" value="이동" onclick="gogo()"/>
+			 </div>
 			</div>
-		</div><hr>
-<div style="border: 4px double black; width: 99%; height: 30px; background-color:#689769;">
-	<div class="br">
-			<a href="mailto:jungo19439@gmail.com">문의하러 가기</a>
-		</div></div>
-		<!-- 영상미리보기 -->
-		<hr>
-		<div style="border: 4px double black; width: 99%; height: 80%; background-color:#689769;">
-			<iframe
-				width="400px"
-				   height="400px"
-				   frameborder="400px"
-				style="border: 100px"
-				src="https://www.youtube.com/embed/fACHfR62yIQ?&rel=0&autoplay=1&modestbranding=1">
+	</div>
+	<!-- 영상미리보기 -->
+	<hr>
+	<div style="border: 4px double black; width: 99%; height: 80%; background-color:#689769;">
+		<iframe
+			width="400px"
+			   height="400px"
+			   frameborder="400px"
+			style="border: 100px"
+			src="https://www.youtube.com/embed/fACHfR62yIQ?&rel=0&autoplay=1&modestbranding=1">
+		</iframe>
+		<iframe width="400px" height="400px" frameborder="400px" style="border: 100px" src="https://www.youtube.com/embed/6o8YE1GpPuo?&rel=0&autoplay=1&modestbranding=1"></iframe>
+		<iframe
+			width="400px"
+			   height="400px"
+			   frameborder="400px"
+			style="border: 100px"
+			src="https://www.youtube.com/embed/WrppjanPkGk?&rel=0&autoplay=1&modestbranding=1">
 			</iframe>
-			<iframe
-				width="400px"
-				   height="400px"
-				   frameborder="400px"
-				style="border: 100px"
-				src="https://www.youtube.com/embed/6o8YE1GpPuo?&rel=0&autoplay=1&modestbranding=1">
-			</iframe>
-			<iframe
-				width="400px"
-				   height="400px"
-				   frameborder="400px"
-				style="border: 100px"
-				src="https://www.youtube.com/embed/WrppjanPkGk?&rel=0&autoplay=1&modestbranding=1">
-			</iframe>
-			<iframe
-				width="400px"
-				   height="400px"
-				   frameborder="400px"
-				style="border: 100px"
-				src="https://www.youtube.com/embed/V7b0EpOY6Es?&rel=0&autoplay=1&modestbranding=1">
-			</iframe>
-			<iframe
-				width="400px"
-				   height="400px"
-				   frameborder="400px"
-				style="border: 100px"
-				src="https://www.youtube.com/embed/x0Nyj8jil1M?&rel=0&autoplay=1&modestbranding=1">
-			</iframe>
-			<iframe
-				width="400px"
-				   height="400px"
-				   frameborder="400px"
-				style="border: 100px"
-				src="https://www.youtube.com/embed/3ZGYMqXeMZA?&rel=0&autoplay=1&modestbranding=1">
-			</iframe>
-			<!-- 소개 ppt -->
-			<iframe
-				width="400px"
-				   height="400px"
-				   frameborder="400px"
-				style="border: 100px"
-				src="https://docs.google.com/presentation/d/1QLAzqiwHR9cL3EDkPelqTseef3GKh29qPRNet4adtsw/embed?slide=id.p">
-			</iframe>
-		</div><hr>
-		<!-- 구독버튼 -->
-		<!-- 출처:wix site -->
-		<div style="border: 4px double black; width: 10%; height: 100px; background-color:#689769;">
-			 <iframe allowfullscreen frameborder="0" width="100%"
-			 height="100%" src="https://static.parastorage.com/services/wix-bolt/1.5862.0/node_modules/wix-santa/static/external/youtubeSubscribeButton.html?channel=UCIO6CZ08wimoQIRLnHCJBXg&layout=full&theme=light"></iframe>
-		</div>
-<!-- 상단으로 버튼 -->
-<div style="position:fixed; bottom: 5px; right: 5px;">
-	<a href="#header" title="상단으로"><img src="위로 아이콘.png" alt="top" width="50px"/></a>
-</div>
-</body>
-</html>
+		<iframe
+			width="400px"
+			   height="400px"
+			   frameborder="400px"
+			style="border: 100px"
+			src="https://www.youtube.com/embed/V7b0EpOY6Es?&rel=0&autoplay=1&modestbranding=1">
+		</iframe>
+		<iframe
+			width="400px"
+			   height="400px"
+			   frameborder="400px"
+			style="border: 100px"
+			src="https://www.youtube.com/embed/x0Nyj8jil1M?&rel=0&autoplay=1&modestbranding=1">
+		</iframe>
+		<iframe
+			width="400px"
+			   height="400px"
+			   frameborder="400px"
+			style="border: 100px"
+			src="https://www.youtube.com/embed/3ZGYMqXeMZA?&rel=0&autoplay=1&modestbranding=1">
+		</iframe>
+		<!-- 소개 ppt -->
+		<iframe width="400px" height="400px" frameborder="400px" style="border: 100px" src="https://docs.google.com/presentation/d/1QLAzqiwHR9cL3EDkPelqTseef3GKh29qPRNet4adtsw/embed?slide=id.p"></iframe>
+ </div><hr>
+<!-- 구독버튼 -->
+ <!-- 출처:wix site -->
+ <div style="border: 4px double black; width: 10%; height: 100px; background-color:#689769;">
+ <iframe allowfullscreen frameborder="0" width="100%"
+ height="100%" src="https://static.parastorage.com/services/wix-bolt/1.5862.0/node_modules/wix-santa/static/external/youtubeSubscribeButton.html?channel=UCIO6CZ08wimoQIRLnHCJBXg&layout=full&theme=light"></iframe>
+ </div>
+
+ <!-- 상단으로 버튼 -->
+ <div style="position:fixed; bottom: 5px; right: 5px;">
+ <a href="#header" title="상단으로"><img src="위로 아이콘.png" alt="top" width="50px"/></a>
+ </div>
+ </body>
+ </html>
