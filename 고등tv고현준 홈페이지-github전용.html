@@ -116,12 +116,22 @@ float: left;
 				return false;
 			}
 			else {
-				alert("다른 문자를 입력하지 마세요!");
-				document.getElementById("gogo_id").value = "";
-				return false;
+				if ( document.getElementById("gogo_id").value == "할일목록" ) {
+					location="'https://jungo194349.github.io/godontvgohyeonjun-home-page/%ED%95%A0%EC%9D%BC%EB%AA%A9%EB%A1%9D.html','_blank'");
+					document.getElementById("gogo_id").value = "";
+					return false;
+				}
+				else {
+					alert("다른 문자를 입력하지 마세요!");
+					document.getElementById("gogo_id").value = "";
+					return false;
+				}
 			}
 		}
 	}
+	function loadList() {
+   document.getElementById("list").innerHTML = localStorage.storedList;
+  }
 </script>
 </head>
 <body oncontextmenu='alert("오른쪽 마우스를 사용하실 수 없습니다"); return false' ondragstart='return false' onselectstart='return false' class="container">
@@ -165,10 +175,17 @@ float: left;
 				<datalist id="browsers">
 				<option value="문의하려 가기">
 				<option value="고등tv고현준 바로가기">
+				<option value="할일목록"></option>
 				</datalist>
 				<input type="button" value="이동" onclick="gogo()"/>
 			 </div>
 			</div>
+	</div><hr>
+	<div style="border: 4px double black; width: 99%; height:90px; background-color:#689769;">
+		<div class="br">
+			<span>할일목록</span><br/>
+			<div id="list" style="border: 2px double black; width: 99%; height:73px; white-space:nowrap; overflow:auto;"></div>
+		</div>
 	</div>
 	<!-- 영상미리보기 -->
 	<hr>
@@ -218,10 +235,15 @@ float: left;
  <iframe allowfullscreen frameborder="0" width="100%"
  height="100%" src="https://static.parastorage.com/services/wix-bolt/1.5862.0/node_modules/wix-santa/static/external/youtubeSubscribeButton.html?channel=UCIO6CZ08wimoQIRLnHCJBXg&layout=full&theme=light"></iframe>
  </div>
-
+ <script>
+  if(localStorage.storedList) {
+   loadList();
+  }
+ </script>
  <!-- 상단으로 버튼 -->
  <div style="position:fixed; bottom: 5px; right: 5px;">
  <a href="#header" title="상단으로"><img src="위로 아이콘.png" alt="top" width="50px"/></a>
  </div>
  </body>
  </html>
+
