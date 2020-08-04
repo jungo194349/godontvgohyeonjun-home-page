@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <title>개산기</title>
+    <style>
+      #bodyColor {
+        background: linear-gradient(to right, lightgreen, lightblue);
+      }
+      #ipt_1 ,#ipt_2 {
+        background: linear-gradient(to right, lightgreen, lightblue);
+        color: #001a09;
+      }
+      input {
+    text-align: right;
+    border: none;
+    background: linear-gradient(to right, lightgreen, lightblue);
+}
+input:focus {
+    outline: none;
+}
+    </style>
+
+  </head>
+  <body id="bodyColor">
+    <h1>개산기</h1><h2>버전:1.0</h2>
+    <input type="button" name="" value="배경-핑크" onclick="chgColor('pink')" id="buttoncolor_3">
+
+    <input type="button" name="" value="배경-연두" onclick="chgColor('lightgreen')" id="buttoncolor_4">
+    <div>
+      <table border="1">
+          <tr>
+              <td colspan="4">
+                  <input type="text" id="display">
+              </td>
+          </tr>
+          <tr>
+              <td colspan="4">
+                  <input type="text" id="result">
+              </td>
+          </tr>
+          <tr>
+              <td colspan="3" onclick="reset()">AC</td>
+              <td onclick="add('/')">/</td>
+          </tr>
+          <tr>
+              <td onclick="add(7)">7</td>
+              <td onclick="add(8)">8</td>
+              <td onclick="add(9)">9</td>
+              <td onclick="add('*')">*</td>
+          </tr>
+          <tr>
+              <td onclick="add(4)">4</td>
+              <td onclick="add(5)">5</td>
+              <td onclick="add(6)">6</td>
+              <td onclick="add('-')">-</td>
+          </tr>
+          <tr>
+              <td onclick="add(1)">1</td>
+              <td onclick="add(2)">2</td>
+              <td onclick="add(3)">3</td>
+              <td onclick="add('+')">+</td>
+          </tr>
+          <tr>
+              <td colspan="2" onclick="add(0)">0</td>
+              <td onclick="add('.')">.</td>
+              <td onclick="calculate()">=</td>
+          </tr>
+      </table>
+  </body>
+  </html>
+    </div>
+
+      <MARQUEE direction="up" scrollamount="2" behavior="alternate" height="60">Made By Hyeonjun</marquee>
+
+
+
+    <script>
+    console.log("this is made Hyeonjuny 이 개산기는 현준이 만들었습니다");
+    function add(char) {
+        var display = document.getElementById('display');
+        display.value = display.value + char;
+    }
+    function calculate() {
+        var display = document.getElementById('display');
+        var result = eval(display.value);
+        document.getElementById('result').value = result;
+    }
+    function reset() {
+        document.getElementById('display').value = "";
+        document.getElementById('result').value = "";
+    }
+
+    function chgColor(color){
+        //html의 백그라운드를 인자값에 따라 바까준다.
+        document.getElementById("bodyColor").style = "background: linear-gradient(to right, "+color+", lightblue);";
+        //버튼 색갈 바꿈
+        document.getElementById("buttoncolor_3").style = "background: linear-gradient(to right, "+color+", lightblue);";
+        document.getElementById("buttoncolor_4").style = "background: linear-gradient(to right, "+color+", lightblue);";
+        //입력창 배경바꿈
+        document.getElementById("display").style = "background: linear-gradient(to right, "+color+", lightblue);";
+        document.getElementById("result").style = "background: linear-gradient(to right, "+color+", lightblue);";
+        console.log("배경바뀜");
+
+    }
+</script>
+
+
+
+  </body>
+</html>

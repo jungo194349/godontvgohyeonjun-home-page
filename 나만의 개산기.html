@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <title>개산기</title>
+    <style>
+      #bodyColor {
+        background: linear-gradient(to right, lightgreen, lightblue);
+      }
+      #ipt_1 ,#ipt_2 {
+        background: linear-gradient(to right, lightgreen, lightblue);
+        color: #001a09;
+      }
+      input {
+        background: linear-gradient(to right, lightgreen, lightblue);
+      }
+    </style>
+
+  </head>
+  <body id="bodyColor">
+    <h1>개산기</h1><h2>버전:1.1</h2>
+    <div>
+      <input type="text" name="" value="" id="ipt_1"><input type="text" name="" value="" id="ipt_2">
+
+      <input type="button" name="" value="더하기" onclick="plus()" id="buttoncolor">
+
+      <input type="button" name="" value="빼기" onclick="mainus()" id="buttoncolor_2">
+
+      <input type="button" name="" value="배경-핑크" onclick="chgColor('pink')" id="buttoncolor_3">
+
+      <input type="button" name="" value="배경-연두" onclick="chgColor('lightgreen')" id="buttoncolor_4">
+
+    </div>
+
+
+    <span>=</span>
+      <div id="ddd" style="color: red;">버튼을 누르세요</div>
+      <span>입니다</span>
+      <MARQUEE direction="up" scrollamount="2" behavior="alternate" height="60">Made By Hyeonjun</marquee>
+
+
+    <script type="text/javascript">
+
+    console.log("this is made Hyeonjuny 이 개산기는 현준이 만들었습니다");
+
+      function plus() {
+
+        var nurbars1 = document.getElementById("ipt_1").value;
+        var nurbars2 = document.getElementById("ipt_2").value;
+        var dds = document.getElementById("ddd");
+
+        // 문자를 숫자로 변환...
+        nurbars1 = Number(nurbars1);
+        nurbars2 = Number(nurbars2);
+
+
+        document.getElementById("ddd").innerHTML = nurbars1+nurbars2
+        if (document.getElementById("ddd").innerHTML == "NaN") {
+          document.getElementById("ddd").innerHTML = "문자를 입력하지 마세요."
+        }
+
+
+
+
+
+        console.log(nurbars1+nurbars2);
+      }
+
+      function chgColor(color){
+          //html의 백그라운드를 인자값에 따라 바까준다.
+          document.getElementById("bodyColor").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          //버튼 색갈 바꿈
+          document.getElementById("buttoncolor").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          document.getElementById("buttoncolor_2").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          document.getElementById("buttoncolor_3").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          document.getElementById("buttoncolor_4").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          //입력창 배경바꿈
+          document.getElementById("ipt_1").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          document.getElementById("ipt_2").style = "background: linear-gradient(to right, "+color+", lightblue);";
+          console.log("배경바뀜");
+
+      }
+
+
+      function mainus(){
+
+        var nurbars1 = document.getElementById("ipt_1").value;
+        var nurbars2 = document.getElementById("ipt_2").value;
+        var dds = document.getElementById("ddd");
+
+        // 문자를 숫자로 변환...
+        nurbars1 = Number(nurbars1);
+        nurbars2 = Number(nurbars2);
+
+
+        document.getElementById("ddd").innerHTML = nurbars1-nurbars2
+        if (document.getElementById("ddd").innerHTML == "NaN") {
+          document.getElementById("ddd").innerHTML = "문자를 입력하지 마세요."
+        }
+
+        console.log(nurbars1-nurbars2);
+
+      }
+
+
+    </script>
+
+
+  </body>
+</html>
