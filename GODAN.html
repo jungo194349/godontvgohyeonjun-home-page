@@ -23,11 +23,25 @@
     font-weight: normal;
     font-style: normal;
 }
+	.top {
+	display:scroll;
+	position:fixed;
+	bottom:10px;
+	right:5px;
+	color:lightgreen;
+}
     </style>
 </head>
 <body>
 	<!-- start title -->
-	<div class="title"><h1>👾 GODAN HOME PAGE 👾</div></h1>
+	<div class="title"><h1 id="top">👾 GODAN HOME PAGE 👾</h1>
+<script type="application/javascript">
+  function getIP(json) {
+    document.write("<p style=“text-align:right;”>안녕하세요, ", json.ip, "님</p>");
+  }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script></div>
 	<!-- end title -->
 	<hr/>
 	<!-- start body -->
@@ -36,13 +50,13 @@
 			<legend>공지사항</legend>
 			<img height="100px" src="https://jungo194349.github.io/godontvgohyeonjun-home-page/C588CA67-77A1-4E4F-8060-373C74C80BE9.gif" alt="멈춰!"/>
 			<br/>⛔️ 홈페이지가 만들어지고 있습니다. ⛔️<br/>
-			beta 0.03 버전<br/>
+			beta 1.0 버전<br/>
 			오류가 많을수 있습니다.
        	</fieldset>
 		<hr/>
 	<!-- 소게 -->
 		<fieldset>
-			<legend>홈패이지 소게</legend>
+			<legend>홈페이지 소게</legend>
 			GODAN 홈페이지에 오신걸 환영합니다.
 			GODAN 홈페이지는 고등tv고현준의 3번째 홈페이지입니다.
 			<br/>
@@ -51,7 +65,7 @@
 	<!-- 홈페이지 소게 -->
 		<fieldset>
 			<legend>자기소게</legend>
-			안녕하세요, 지금 오믈렛 아케이드를 하고있는 고등tv고현준입니다. 저는 옛날에 고등tv고현준이라는 이름으로 유튜브를 했었는데요, 게정이 날라가 			당분간 쉬고있다가 카카오 tv로 영상을 찍기 시작했습니다, 하지만 저는 시스탬이 마음에 안들어서 카카오tv는 쉬고 있습니다. 그래서 새로 만든 채널이 			오믈렛아케이드의 jungoyou2463 이라는 채널입니다.
+			안녕하세요, 지금 오믈렛 아케이드와 유튜브 하고있는 고등tv고현준입니다. 저는 옛날에 고등tv고현준이라는 이름으로 유튜브를 했었는데요(근데 다시 할거라고 생각을 못했는데 하고있네..), 게정이 날라가 			당분간 쉬고있다가 카카오 tv로 영상을 찍기 시작했습니다, 하지만 저는 시스탬이 마음에 안들어서 카카오tv는 쉬고 있습니다. 그래서 새로 만든 채널이 			오믈렛아케이드의 jungoyou2463 이라는 채널입니다.아 그리고 다시 유튜브 채널은 만들었습니다.
 			또한 자기소게 영상도 있습니다.<br/><br/>
 			<a href="https://omlet.gg/v/atIwFdHz819N3hEPe">링크</a><br/><br/>
 			<div id="cincopa_472a5c" style="float: left;">비디오 미리보기 로딩중...</div><script type="text/javascript">
@@ -62,12 +76,20 @@ cp.async = true; cp.src = "https://rtcdn.cincopa.com/libasync.js";
 var c = document.getElementsByTagName("script")[0];
 c.parentNode.insertBefore(cp, c); })(); </script>
 		</fieldset>
+		<fieldset>
+			<legend>생존일지</legend>
+			그냥 야생해서 생존하는 일지 - 등어 -<br/><br/>			예고편:<a href="https://bit.ly/2UCw3fB">링크</a><br/>
+			1화:<a href="https://omlet.gg/s/az1hFxpLftNEJlzf7">링크</a><br/>
+			1.5화(미공게 장면 모음):<a href="https://omlet.gg/v/au-wxIo-oreKiJxA9">링크</a>
+		</fieldset>
 	<!-- 각종 링크 	-->
 		<fieldset>
 			<legend>각종 링크</legend>
 			카카오 tv:<a href="https://tv.kakao.com/channel/3729500/video">링크</a><br/>
 			블로그(티스토리):<a href="https://godontvgohyeonjun.tistory.com/">링크</a><br/>
 			오믈랫 아캐이드:<a href="https://omlet.gg/profile/jungoyou2463/">링크</a><br/>
+			유튜브:<a href="https://www.youtube.com/channel/UCRjjfZvY_iJ1_yUQmAST1fg">링크</a>
+
 		</fieldset>
 	<!-- 홈페이지 -->
 		<fieldset>
@@ -84,6 +106,12 @@ c.parentNode.insertBefore(cp, c); })(); </script>
 	<!-- start font -->
 	<div class="font">
 		<small>이 페이지는 (주)SPC삼립에서 제공한 Sandoll 삼립호빵체가 사용되어 있습니다.</small>
+	</div>
+	<!-- top 버튼 -->
+	<div class="top" style="width:50px;height:50px;">
+		<center>
+			<a href="#top" style="text-decoration:none;color:black;"><img src="tops.PNG" style="width:50px;height:50px;"/></a>
+		</center>
 	</div>
 </body>
 </html>
